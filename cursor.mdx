@@ -1,0 +1,49 @@
+---
+title: Cursor
+description: Using Chkk from Cursor
+---
+
+# Cursor + Chkk
+
+## Installation
+
+Download Cursor from [cursor](https://www.cursor.com/) and follow the installation instructions for your operating system (macOS, Windows, or Linux). Once installed, launch Cursor and proceed to configuration below.
+
+Restart Cursor after saving.
+
+## Settings Snippet
+
+```json
+{
+  "mcp": {
+    "servers": {
+      "chkk": {
+        "endpoint": "https://api.chkk.dev/mcp",
+        "auth": {
+          "type": "Bearer",
+          "token": "<CHKK_API_TOKEN>"
+        }
+      }
+    }
+  }
+}
+```
+
+## Verification
+
+Restart Cursor and verify the Chkk MCP server is registered and tools are listed.
+
+## Example Usage
+
+To fetch upgrade diffs for a specific upgrade and project installation, use:
+
+```
+@chkk mcp get-diffs --upgrade-id=abc --project=installation --component=cert-manager
+```
+
+Chkk will respond with the relevant diffs for cert-manager in the specified upgrade context.
+
+## Usage
+
+- Use the above prompt in Cursor's chat panel to retrieve upgrade diffs for any component or upgrade ID.
+- Replace `upgrade-id` and `component` as needed for your scenario. 

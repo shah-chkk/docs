@@ -1,0 +1,46 @@
+---
+title: VS Code
+description: Chkk in VS Code & GitHub Copilot Chat
+---
+
+# VS Code Integration
+
+## Installation
+
+Download Visual Studio Code from [code.visualstudio.com](https://code.visualstudio.com/) and install it for your operating system. Optionally, install the GitHub Copilot Chat extension from the VS Code Marketplace for AI chat features.
+
+## Configure the Server
+
+Open *Preferences → Settings (JSON)* and add:
+
+```json
+{
+  "mcp.servers": {
+    "chkk": {
+      "endpoint": "https://api.chkk.dev/mcp",
+      "headers": {
+        "Authorization": "Bearer <CHKK_API_TOKEN>"
+      }
+    }
+  }
+}
+```
+
+## Verification
+
+Restart VS Code and verify the Chkk MCP server is registered and tools are listed.
+
+## Example Usage
+
+To fetch upgrade diffs for a specific upgrade and project installation, use:
+
+```
+@chkk mcp get-diffs --upgrade-id=abc --project=installation --component=cert-manager
+```
+
+Chkk will respond with the relevant diffs for cert-manager in the specified upgrade context.
+
+## Usage
+
+- Use the above prompt in Copilot Chat or your preferred AI extension to retrieve upgrade diffs for any component or upgrade ID.
+- Replace `upgrade-id` and `component` as needed for your scenario.

@@ -1,0 +1,32 @@
+---
+title: Getting Started
+description: Your first upgrade with Chkk
+---
+
+# Getting Started
+
+This short tutorial shows how to create a safe Kubernetes upgrade plan using Chkk from inside your IDE. We will use Cursor in the examples, but the same prompts work anywhere MCP is supported.
+
+## Three-Message Flow
+
+1. `@chkk scan production` – Chkk inventories the live cluster and lists any blockers.
+2. `@chkk plan kubernetes 1.28 → 1.29` – Chkk returns a numbered playbook plus unified diffs.
+3. `@chkk health-checks` – Chkk suggests Prometheus rules and kubectl commands to monitor the rollout.
+
+Save the generated files (they come back as code blocks or attachments) to your repository and open a pull request as usual.
+
+## Output Structure
+
+```
+.chkk/
+  upgrade-plan.yaml
+  diffs/
+    cluster.yaml
+    addons/
+      ingress.yaml
+      coredns.yaml
+  observability/
+    prometheus-rules.yaml
+```
+
+That’s all you need to move from idea to audited upgrade. 

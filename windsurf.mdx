@@ -1,0 +1,44 @@
+---
+title: Windsurf
+description: Team workflows with Chkk
+---
+
+# Add the Server
+
+## Installation
+
+Windsurf is a cloud-based collaborative IDE. Access it at [windsurf.dev](https://windsurf.dev/) and sign in with your team account. No local installation is required.
+
+In your Windsurf workspace settings include:
+
+```json
+{
+  "mcp": {
+    "servers": {
+      "chkk": {
+        "endpoint": "https://api.chkk.dev/mcp",
+        "token": "${WIND_SURF_SECRET_CHKK_TOKEN}"
+      }
+    }
+  }
+}
+```
+
+## Verification
+
+Refresh Windsurf and verify the Chkk MCP server is registered and tools are listed.
+
+# Example Usage
+
+To fetch upgrade diffs for a specific upgrade and project installation, use:
+
+```
+@chkk mcp get-diffs --upgrade-id=abc --project=installation --component=cert-manager
+```
+
+Chkk will respond with the relevant diffs for cert-manager in the specified upgrade context.
+
+## Usage
+
+- Use the above prompt in Windsurf's chat or command panel to retrieve upgrade diffs for any component or upgrade ID.
+- Replace `upgrade-id` and `component` as needed for your scenario. 

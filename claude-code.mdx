@@ -1,0 +1,33 @@
+---
+title: Claude Code
+description: Conversational upgrades with Claude Code
+---
+
+# Connecting Chkk
+
+## Installation
+
+Claude Code is available via [claude.ai](https://claude.ai/) for eligible users.
+
+In Claude Code open *Settings → Tools* and register the server:
+
+```
+Name: chkk
+Endpoint: https://api.chkk.dev/mcp
+```
+
+## Verification
+
+Refresh Claude Code and verify the Chkk MCP server is registered and tools are listed.
+
+# Example Conversation
+
+```
+User: @chkk mcp get-diffs --upgrade-id=abc --project=installation --component=cert-manager
+Chkk: (returns the relevant diffs for cert-manager in the specified upgrade context)
+```
+
+## Usage
+
+- Use the above prompt in Claude Code to retrieve upgrade diffs for any component or upgrade ID.
+- Replace `upgrade-id` and `component` as needed for your scenario.

@@ -1,0 +1,63 @@
+{
+  "$schema": "https://mintlify.com/schema.json",
+  "name": "Chkk Docs",
+  "logo": {
+    "dark": "/logo/dark.svg",
+    "light": "/logo/light.svg"
+  },
+  "favicon": "/favicon.svg",
+  "colors": {
+    "primary": "#2563EB",
+    "light": "#3B82F6",
+    "dark": "#1D4ED8",
+    "background": {
+      "dark": "#0A0A0A"
+    }
+  },
+  "topbarLinks": [
+    {
+      "name": "Support",
+      "url": "mailto:support@chkk.io"
+    }
+  ],
+  "topbarCtaButton": {
+    "name": "Book Demo",
+    "url": "https://chkk.io/demo"
+  },
+  "tabs": [
+    {
+      "name": "API Reference",
+      "url": "api-reference"
+    }
+  ],
+  "anchors": [
+    {
+      "name": "Community",
+      "icon": "discord",
+      "url": "https://discord.gg/chkk"
+    }
+  ],
+  "navigation": [
+    {
+      "group": "Documentation",
+      "pages": ["overview"]
+    },
+    {
+      "group": "Setup",
+      "pages": ["setup"]
+    },
+    {
+      "group": "Getting Started",
+      "pages": ["getting-started"]
+    },
+    {
+      "group": "Integrations",
+      "pages": ["cursor", "claude-code", "windsurf", "vs-code"]
+    }
+  ],
+  "footerSocials": {
+    "github": "https://github.com/chkk-io",
+    "discord": "https://discord.gg/chkk",
+    "twitter": "https://twitter.com/chkk_io"
+  }
+} 

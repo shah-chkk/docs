@@ -1,0 +1,27 @@
+---
+title: Setup
+description: Connect your IDE to Chkk
+---
+
+# Setup
+
+Chkk Upgrade Intelligence is a cloud-hosted MCP service—you don’t need to install any binaries or run a local agent. All interaction happens through your IDE’s MCP client.
+
+## Prerequisites
+
+• A kubeconfig pointing at the cluster you want to upgrade  
+• An IDE / AI tool that supports MCP (Cursor, VS Code, Claude Code, Windsurf)  
+• A Chkk account and API token (grab it from the Chkk dashboard)
+
+## One-Time Configuration
+
+1. Copy your API token from the dashboard.  
+2. In your IDE settings add an MCP server entry pointing at `https://api.chkk.dev/mcp` and include the header `Authorization: Bearer <YOUR_TOKEN>`.  
+3. Restart the IDE so the new server is detected.
+
+That’s it—continue with the guide for your tool of choice:
+
+- [Cursor](/cursor)
+- [VS Code](/vs-code)
+- [Claude Code](/claude-code)
+- [Windsurf](/windsurf) 
